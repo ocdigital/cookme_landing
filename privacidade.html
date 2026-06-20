@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Política de Privacidade — CookMe</title>
+  <style>
+    :root { --green: #16a34a; --ink: #1e293b; --muted: #64748b; --bg: #f8fafc; --card: #ffffff; --border: #e2e8f0; }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: var(--bg); color: var(--ink); line-height: 1.6; }
+    header { background: var(--card); border-bottom: 1px solid var(--border); padding: 16px 24px; display: flex; align-items: center; gap: 12px; }
+    header a { text-decoration: none; color: var(--green); font-weight: 600; font-size: 14px; }
+    header .logo { font-size: 20px; font-weight: 800; color: var(--ink); }
+    header .logo span { color: var(--green); }
+    main { max-width: 720px; margin: 48px auto; padding: 0 24px 80px; }
+    h1 { font-size: 28px; font-weight: 800; color: var(--ink); margin-bottom: 8px; }
+    .sub { color: var(--muted); font-size: 14px; margin-bottom: 40px; }
+    .section { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 16px; }
+    h2 { font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; color: var(--muted); margin-bottom: 12px; }
+    p { color: #334155; font-size: 15px; margin-bottom: 10px; }
+    p:last-child { margin-bottom: 0; }
+    ul { color: #334155; font-size: 15px; padding-left: 20px; }
+    ul li { margin-bottom: 6px; }
+    a.email { color: var(--green); text-decoration: none; font-weight: 600; }
+    .badge { display: inline-block; background: #dcfce7; color: var(--green); font-size: 12px; font-weight: 700; padding: 4px 10px; border-radius: 999px; margin-bottom: 16px; }
+    footer { text-align: center; font-size: 13px; color: var(--muted); padding: 24px; border-top: 1px solid var(--border); }
+  </style>
+</head>
+<body>
+  <header>
+    <span class="logo">Cook<span>Me</span></span>
+    <a href="index.html">← Voltar para o site</a>
+  </header>
+
+  <main>
+    <span class="badge">LGPD — Lei 13.709/2018</span>
+    <h1>Política de Privacidade</h1>
+    <p class="sub">Última atualização: junho de 2026</p>
+
+    <div class="section">
+      <h2>1. Quem somos</h2>
+      <p>O <strong>CookMe</strong> é um aplicativo de gestão de cozinha inteligente desenvolvido e operado pela <strong>OC Digital</strong>, com sede no Brasil. Nosso contato para assuntos de privacidade é <a class="email" href="mailto:dpo@cookme.com.br">dpo@cookme.com.br</a>.</p>
+    </div>
+
+    <div class="section">
+      <h2>2. Dados que coletamos</h2>
+      <ul>
+        <li><strong>Dados de cadastro:</strong> nome, endereço de e-mail e senha (armazenada com hash bcrypt)</li>
+        <li><strong>Dados de uso:</strong> ingredientes registrados, histórico de receitas visualizadas e executadas, planejamento semanal</li>
+        <li><strong>Dados de nota fiscal (OCR):</strong> imagem da nota e produtos identificados — processados localmente e armazenados apenas com seu consentimento</li>
+        <li><strong>Dados de pagamento:</strong> gerenciados exclusivamente pela Stripe — não armazenamos dados de cartão</li>
+        <li><strong>Dados técnicos:</strong> logs de acesso, erros (via Sentry, anonimizados) e métricas de performance</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>3. Como usamos seus dados</h2>
+      <ul>
+        <li>Autenticar e manter sua conta segura</li>
+        <li>Gerar sugestões de receitas personalizadas com base no seu inventário</li>
+        <li>Processar pagamentos de assinatura</li>
+        <li>Enviar notificações relevantes (itens vencendo, planejamento da semana)</li>
+        <li>Melhorar o serviço com base em métricas agregadas e anonimizadas</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>4. Compartilhamento de dados</h2>
+      <p>Não vendemos seus dados. Compartilhamos apenas com:</p>
+      <ul>
+        <li><strong>Stripe:</strong> processamento de pagamentos (PCI-DSS nível 1)</li>
+        <li><strong>Anthropic / Google:</strong> geração de receitas por IA — apenas o texto dos ingredientes, sem dados pessoais identificáveis</li>
+        <li><strong>Sentry:</strong> monitoramento de erros (dados anonimizados)</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>5. Seus direitos (LGPD)</h2>
+      <p>De acordo com a Lei 13.709/2018, você tem direito de:</p>
+      <ul>
+        <li><strong>Acesso:</strong> solicitar uma cópia dos seus dados</li>
+        <li><strong>Correção:</strong> atualizar dados incorretos diretamente no app</li>
+        <li><strong>Exclusão:</strong> excluir sua conta e todos os dados no app (Perfil → Privacidade → Excluir conta)</li>
+        <li><strong>Portabilidade:</strong> solicitar exportação dos seus dados em formato legível</li>
+        <li><strong>Revogação de consentimento:</strong> desativar notificações a qualquer momento</li>
+      </ul>
+      <p>Para exercer seus direitos, contate: <a class="email" href="mailto:dpo@cookme.com.br">dpo@cookme.com.br</a></p>
+    </div>
+
+    <div class="section">
+      <h2>6. Segurança</h2>
+      <ul>
+        <li>Comunicação protegida por HTTPS/TLS</li>
+        <li>Senhas armazenadas com bcrypt (hash + salt)</li>
+        <li>Tokens de sessão com expiração automática</li>
+        <li>Backups diários criptografados</li>
+        <li>Acesso ao banco de dados restrito por firewall</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>7. Cookies e rastreamento</h2>
+      <p>O aplicativo móvel não utiliza cookies. A landing page pode usar cookies essenciais para funcionamento básico. Não utilizamos cookies de rastreamento de terceiros ou publicidade.</p>
+    </div>
+
+    <div class="section">
+      <h2>8. Retenção de dados</h2>
+      <p>Seus dados são mantidos enquanto sua conta estiver ativa. Após exclusão da conta, os dados são removidos em até 30 dias, exceto onde a lei exigir retenção por período maior (ex.: dados fiscais).</p>
+    </div>
+
+    <div class="section">
+      <h2>9. Menores de idade</h2>
+      <p>O CookMe não é direcionado a menores de 13 anos. Não coletamos intencionalmente dados de crianças. Se identificarmos tal situação, os dados serão excluídos imediatamente.</p>
+    </div>
+
+    <div class="section">
+      <h2>10. Alterações nesta política</h2>
+      <p>Alterações significativas serão comunicadas via notificação no app ou e-mail com antecedência mínima de 15 dias. A data de "última atualização" no topo desta página sempre reflete a versão vigente.</p>
+    </div>
+
+    <div class="section">
+      <h2>11. Contato</h2>
+      <p>Para dúvidas, solicitações ou reclamações sobre privacidade:</p>
+      <ul>
+        <li>E-mail geral: <a class="email" href="mailto:contato@cookme.com.br">contato@cookme.com.br</a></li>
+        <li>Encarregado de Dados (DPO): <a class="email" href="mailto:dpo@cookme.com.br">dpo@cookme.com.br</a></li>
+      </ul>
+    </div>
+  </main>
+
+  <footer>© 2026 CookMe — OC Digital · Todos os direitos reservados</footer>
+</body>
+</html>
